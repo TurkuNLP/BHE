@@ -6,13 +6,13 @@
 ############
 
 
-main_dir=/media/suwisa/BB3/system_test
+main_dir=~/data_directory
 
-main_tool=/home/suwisa
-genia_dir=$main_tool/geniass
-nersuite_dir=$main_tool/nersuite-master
+main_tool=~/BHE
+genia_dir=~/geniass
+nersuite_dir=~/nersuite-master
 
-script_dir=$main_tool/trunk/BB3_release
+script_dir=$main_tool/NER
 
 in_dir=$main_dir/input
 out_dir=$main_dir/output
@@ -88,7 +88,7 @@ ent=Hab
 mkdir $hab_dir
 model_hab=$main_dir/models/BioNLP-ST-2016_BB-cat+ner_train_dev.hab.fuzzy.m
 
-cd /media/suwisa/BB3/system_test/bacteria_biotope/
+cd $main_directory/Normalization/bacteria_biotope/
 python fuzzy_matching.py -i $temp_dir -e Habitat -c 2 -f .off
 
 ls $temp_dir/*$tag_ext > $temp_dir/hab_off.lst

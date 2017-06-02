@@ -9,9 +9,7 @@ The instruction for installations are provided in the following URLs
 - Genia Sentence Splitter (http://www.nactem.ac.uk/y-matsu/geniass/)
 - NERsuite, A named entity recognition toolkit (http://nersuite.nlplab.org/)
 
-Prior to running NER pipeline, bash shell script (ner_pipeline.sh) should be edited to specify the directory where the BHE, NERsuites and Genia Sentence Splitter locate.
-
-In addition, the directory of the input data should be also specified.
+Prior to running NER pipeline, bash shell script (ner_pipeline.sh) should be edited to specify the directory directory where BHE, NERsuites and Genia Sentence Splitter are installed. In addition, the directory of the input data should be also specified. 
 
 main_tool=BHE_folder
 genia_dir=geniass_folder

@@ -13,10 +13,10 @@ Prior to running NER pipeline, bash shell script (ner_pipeline.sh) should be edi
 
 In addition, the directory of the input data should be also specified.
 
-main_tool=~/BHE
-genia_dir=~/geniass
-nersuite_dir=~/nersuite-master
-in_dir=~/input
+main_tool=BHE_folder
+genia_dir=geniass_folder
+nersuite_dir=nersuite-master_folder
+in_dir=data_folder
 
 After all the settings are done, the bash script can be run by this command line
 ./ner_pipeline.sh

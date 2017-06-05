@@ -1,7 +1,29 @@
 """
   Code by: Farrokh Mehryary 
-           Turku BioNLP Group, FT Department, University of Turku. 
+           Turku NLP Group, Department of FT, University of Turku, Finland 
            email: farmeh@utu.fi 
+  
+  This code requires:
+           - python: version 2.7.x
+           - keras : version 1.2.0
+           - theano: version 0.8.2
+  
+
+  You should point out the program to where TEES XML files for BB3 (BB-2016) training, development and test set 
+  files are located (either BB3-event or BB3-event+NER files). 
+  
+  You can run the program in two different modes using the --task argument:
+   --task predictDevel  : to train on the given training set file, then predicting given development set file
+   --task "predictTest  : to train on the given training+development sets files, predicting given test set file
+        
+  example input arguments: 
+    --task predictTest 
+    --trainFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-train.xml
+    --develFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-devel.xml
+    --testFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-test.xml
+    
+  You can try different parsing and SD conversion, but we recommend using either -basic or -nonCollapsed SD
+  conversion of the BLLIP parses. 
 """
 import os , sys , argparse 
 from Helpers import RelationExtractionPipeline
@@ -152,9 +174,4 @@ if __name__ == "__main__":
     AGGR.AggregateFolderIntoFolder (GoldTEESXML, PredFolder, AggrFolder)
     
     """
-    example input arguments: 
-    --task predictTest 
-    --trainFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-train.xml
-    --develFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-devel.xml
-    --testFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-test.xml
     """

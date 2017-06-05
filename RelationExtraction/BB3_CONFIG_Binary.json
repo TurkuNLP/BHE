@@ -1,0 +1,53 @@
+{
+   "ExecutionParameters" : {
+          "DoNotAskAnyQuestions" : true   
+   },
+
+   "EvaluationParameters" : {
+          "ExcludeClassLabelsList" : [],
+          "DecimalPoints" : 6
+   },
+   
+   "TokenizationAndPOSTagging" : {
+          "SpecialTagForLastToken" : false   
+   },
+
+   "W2V_Model" : {
+           "Model_Address"    : "/home/farmeh/DO_NOT_DELETE/WordEmbeddings/PubMed-and-PMC-w2v.bin" ,
+           "MaxWordsInMemory" : 100000 ,
+           "TotalWords"       : 500000  
+    },  
+    
+    "ExampleGeneration" : {
+           "Method" : "M2" , 
+           "SetAllBagsLengthsEqual" : true , 
+           "PadVectorsFromLeft": false , 
+           "M1_Bags_MaxLength" : 150 , 
+           "M2_Bags_MaxLength" : 200 , 
+           "SDP_MAXLEN_BECAREFUL" : 30, 
+           "MAX_SENTENCE_LENGTH" : null ,
+           "ReplaceVectorForEntityTypeIfTokenNotFound" : [["Bacteria","bacteria"]],
+           "HaltIfNoSDP"   : false,
+           "SDP_DIRECTION" : "from_e1value_to_e2value",
+           "Generate_Reversed_SDP_Features" : false,
+	      "Directional_Dependency_Types"   : false, 
+	      "Use_General_prep_prepc_conj_DT" : false,
+           "ActionON_CrossSentenceExamples" : "DISCARD",
+           "ActionON_DuplicateRelations"    : "DISCARD",
+           "ActionON_MissingRelations"      : "GENERATEASNEGATIVES"
+    }, 
+
+    "CLASSES" : 
+       {  "Negative" : "neg",   
+          "Positive" : ["Lives_In"]
+       } ,
+
+    "ClassificationType" : "binary" ,
+    "ValidEnityTypesForRelations" : ["Bacteria" , "HabiTat" , "Geographical"] ,
+    "InteractionElementName" : "interaction" ,
+    "InteractionElementClassAttributeName" : "type",
+    "SelfInteractingEntities"              : null,
+    "ValidInteractingPairEntityTypes"      : [["Bacteria","HabiTat"] , ["Bacteria","Geographical"]],
+    "e1Role_e2Role"                        : [["Bacteria", "Bacteria"],["HabiTat","Location"],["Geographical","Location"]],
+    "RemoveSentenceIfNoParseExists"        : false
+}

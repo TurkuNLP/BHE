@@ -8,13 +8,12 @@
            - keras : version 1.2.0
            - theano: version 0.8.2
   
-
-  You should point out the program to where TEES XML files for BB3 (BB-2016) training, development and test set 
-  files are located (either BB3-event or BB3-event+NER files). 
+  You should point out the program to where TEES XML files for BB3 (BB-2016) training, development (and test) sets
+  are located (either for BB3-event or BB3-event+NER tasks). 
   
   You can run the program in two different modes using the --task argument:
    --task predictDevel  : to train on the given training set file, then predicting given development set file
-   --task "predictTest  : to train on the given training+development sets files, predicting given test set file
+   --task predictTest   : to train on the given training+development sets files, predicting given test set file
         
   example input arguments: 
     --task predictTest 
@@ -22,7 +21,7 @@
     --develFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-devel.xml
     --testFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-test.xml
     
-  You can try different parsing and SD conversion, but we recommend using either -basic or -nonCollapsed SD
+  You may try different parsing and SD conversion, but we recommend using either -basic or -nonCollapsed SD
   conversion of the BLLIP parses. 
 """
 import os , sys , argparse 
@@ -173,5 +172,4 @@ if __name__ == "__main__":
     AggrFolder  = args.aggregationOutputFolder + ArchitectureName + "/" 
     AGGR.AggregateFolderIntoFolder (GoldTEESXML, PredFolder, AggrFolder)
     
-    """
-    """
+    print "END."

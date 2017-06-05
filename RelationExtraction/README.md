@@ -19,8 +19,7 @@ Author: Farrokh Mehryary<br>
    --task predictTest   : to train on the given training+development sets files, predicting given test set file<br>
   <br>
   example input arguments:<br>
-  <mono>
-  python BB3_event_pipeline.py --task predictTest --trainFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-train.xml --develFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-devel.xml --testFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-test.xml
-  </mono><br><br>
+python BB3_event_pipeline.py --task predictTest --trainFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-train.xml --develFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-devel.xml --testFile /home/user1/BB_Corpora/BB_EVENT_16_BLLIP-BIO_STANFORD-CONVERT-basic_170207/BB_EVENT_16-test.xml
+<br><br>
   You may try different parsings and SD conversions, but we recommend using either <b>-basic</b> or <b>-nonCollapsed</b> SD
   conversion of the BLLIP parses. 

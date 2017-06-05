@@ -9,6 +9,8 @@ Author: Farrokh Mehryary<br>
            -keras : version 1.2.0<br>
            -theano: version 0.8.2<br>
   <br>
+  <br>You should download the built <i>word2vec</i> model from http://evexdb.org/pmresources/vec-space-models/PubMed-and-PMC-w2v.bin and place it in your local disk. Then, specify its address in <b>BB3_CONFIG_Binary.json</b> file in the source repository.<br>
+  
   You should point out the program to where TEES XML files for the BB3 (BB-2016) training, development (and test) sets
   are located (either for BB3-event or BB3-event+NER tasks). 
   <br>

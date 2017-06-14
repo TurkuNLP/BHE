@@ -2,7 +2,7 @@
 
 Author: Farrokh Mehryary<br>
         Turku NLP Group, Department of FT, University of Turku, Finland<br>
-        email: farmeh@utu.fi<br> 
+        email: first . last @utu.fi<br> 
   <br>
   This code requires:<br>
            -python: version 2.7.x<br>
